@@ -5,6 +5,8 @@ Project("{f2a71f9b-5d33-465a-a702-920d77279786}") = "HubbleGalleryFSharp.iOS", "
 EndProject
 Project("{f2a71f9b-5d33-465a-a702-920d77279786}") = "HubbleGalleryFSharp.Droid", "Droid\HubbleGalleryFSharp.Droid.fsproj", "{1556DC1A-93D8-4231-9AED-4A0AC753CACD}"
 EndProject
+Project("{f2a71f9b-5d33-465a-a702-920d77279786}") = "HubbleGalleryFSharp", "HubbleGalleryFSharp\HubbleGalleryFSharp.fsproj", "{E2E7B7BB-8A7F-46B5-ABFB-B51BB40CB0AB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,5 +41,17 @@ Global
 		{1556DC1A-93D8-4231-9AED-4A0AC753CACD}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
 		{1556DC1A-93D8-4231-9AED-4A0AC753CACD}.Debug|iPhone.ActiveCfg = Debug|Any CPU
 		{1556DC1A-93D8-4231-9AED-4A0AC753CACD}.Debug|iPhone.Build.0 = Debug|Any CPU
+		{E2E7B7BB-8A7F-46B5-ABFB-B51BB40CB0AB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E2E7B7BB-8A7F-46B5-ABFB-B51BB40CB0AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E2E7B7BB-8A7F-46B5-ABFB-B51BB40CB0AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E2E7B7BB-8A7F-46B5-ABFB-B51BB40CB0AB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E2E7B7BB-8A7F-46B5-ABFB-B51BB40CB0AB}.Debug|iPhoneSimulator.ActiveCfg = Debug|Any CPU
+		{E2E7B7BB-8A7F-46B5-ABFB-B51BB40CB0AB}.Debug|iPhoneSimulator.Build.0 = Debug|Any CPU
+		{E2E7B7BB-8A7F-46B5-ABFB-B51BB40CB0AB}.Release|iPhone.ActiveCfg = Release|Any CPU
+		{E2E7B7BB-8A7F-46B5-ABFB-B51BB40CB0AB}.Release|iPhone.Build.0 = Release|Any CPU
+		{E2E7B7BB-8A7F-46B5-ABFB-B51BB40CB0AB}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
+		{E2E7B7BB-8A7F-46B5-ABFB-B51BB40CB0AB}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
+		{E2E7B7BB-8A7F-46B5-ABFB-B51BB40CB0AB}.Debug|iPhone.ActiveCfg = Debug|Any CPU
+		{E2E7B7BB-8A7F-46B5-ABFB-B51BB40CB0AB}.Debug|iPhone.Build.0 = Debug|Any CPU
 	EndGlobalSection
 EndGlobal

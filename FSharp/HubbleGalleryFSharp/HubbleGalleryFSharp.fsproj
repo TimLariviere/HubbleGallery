@@ -4,6 +4,9 @@
     <EnableDefaultEmbeddedResourceItems>false</EnableDefaultEmbeddedResourceItems>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Utils.fs" />
+    <Compile Include="Models.fs" />
+    <Compile Include="HubbleDataSource.fs" />
     <EmbeddedResource Include="HubbleGalleryFSharpPage.xaml" Generator="MSBuild:UpdateDesignTimeXaml" />
     <Compile Include="HubbleGalleryFSharpPage.xaml.fs" />
     <EmbeddedResource Include="App.xaml" Generator="MSBuild:UpdateDesignTimeXaml" />
@@ -11,5 +14,7 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Xamarin.Forms" Version="2.5.0.122203" />
+    <PackageReference Include="FSharp.Data" Version="2.4.3" />
   </ItemGroup>
+  <Import Project="fsc.props" />
 </Project>
