@@ -11,7 +11,6 @@ module HubbleDataSource =
     type HubbleDataSource = XmlProvider<"HubbleImageGallerySample.xml">
 
     type CategoryFeeds =
-        | All
         | Anniversary
         | Cosmology
         | Exoplanets
@@ -28,15 +27,16 @@ module HubbleDataSource =
         | Stars
 
     type Feeds =
+        | All
         | Top100
         | Category of CategoryFeeds
 
     type Feed = { Id: string; Name: string }
 
     let feeds = 
-        [ 
+        [
+            All, { Id = ""; Name = "All" }
             Top100, { Id = "top100"; Name = "Top 100" }
-            Category All, { Id = ""; Name = "All" }
             Category Anniversary, { Id = "anniversary"; Name = "Anniversary" }
             Category Cosmology, { Id = "cosmology"; Name = "Cosmology" }
             Category Exoplanets, { Id = "exoplanets"; Name = "Exoplanets" }
@@ -56,8 +56,8 @@ module HubbleDataSource =
     let getFeedName feed =
         let feedName = feeds.Item feed
         match feed with
+        | All -> ""
         | Top100 -> feedName.Id
-        | Category All -> ""
         | Category c -> "category/" + feedName.Id
 
     let getFeedFromName name =
