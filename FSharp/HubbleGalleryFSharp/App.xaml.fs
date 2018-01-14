@@ -3,4 +3,4 @@
 open Xamarin.Forms
 
 type App() =
-    inherit Application(MainPage = HubbleGalleryFSharpPage())
+    inherit Application(MainPage = NavigationPage(MainPage()))

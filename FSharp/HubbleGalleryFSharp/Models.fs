@@ -2,7 +2,6 @@
 
 open System
 
-type Category = Category of string
 type HtmlString = Html of string
 
 type HubblePicture =
@@ -10,8 +9,7 @@ type HubblePicture =
         Title: string
         Link: Uri
         Description: HtmlString
-        Author: string
+        ThumbnailLink: Uri
         ImageLink: Uri
-        Categories: Category array
         Date: DateTime
     }

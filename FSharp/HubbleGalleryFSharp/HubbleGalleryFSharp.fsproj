@@ -7,12 +7,12 @@
     <Compile Include="Utils.fs" />
     <Compile Include="Models.fs" />
     <Compile Include="HubbleDataSource.fs" />
-    <EmbeddedResource Include="HubbleGalleryFSharpPage.xaml" Generator="MSBuild:UpdateDesignTimeXaml" />
-    <Compile Include="HubbleGalleryFSharpPage.xaml.fs" />
+    <EmbeddedResource Include="DetailPage.xaml" Generator="MSBuild:UpdateDesignTimeXaml" />
+    <EmbeddedResource Include="MainPage.xaml" Generator="MSBuild:UpdateDesignTimeXaml" />
     <EmbeddedResource Include="App.xaml" Generator="MSBuild:UpdateDesignTimeXaml" />
+    <Compile Include="DetailPage.xaml.fs" />
+    <Compile Include="MainPage.xaml.fs" />
     <Compile Include="App.xaml.fs" />
-  </ItemGroup>
-  <ItemGroup>
     <PackageReference Include="Xamarin.Forms" Version="2.5.0.122203" />
     <PackageReference Include="FSharp.Data" Version="2.4.3" />
   </ItemGroup>

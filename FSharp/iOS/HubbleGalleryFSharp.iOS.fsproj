@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+﻿<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="..\packages\Xamarin.Forms.2.5.0.122203\build\netstandard1.0\Xamarin.Forms.props" Condition="Exists('..\packages\Xamarin.Forms.2.5.0.122203\build\netstandard1.0\Xamarin.Forms.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -106,12 +105,13 @@
     <InterfaceDefinition Include="LaunchScreen.storyboard" />
     <None Include="Info.plist" />
     <None Include="Entitlements.plist" />
+    <Compile Include="HackedPageRenderer.fs" />
     <Compile Include="AppDelegate.fs" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\HubbleGalleryFSharp\HubbleGalleryFSharp.fsproj">
-      <Project>{E2E7B7BB-8A7F-46B5-ABFB-B51BB40CB0AB}</Project>
+      <Project>{5E15C864-E997-4E8A-BE98-D27F56C64EFE}</Project>
       <Name>HubbleGalleryFSharp</Name>
     </ProjectReference>
   </ItemGroup>
