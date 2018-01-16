@@ -1,18 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:HubbleGalleryFSharp" x:Class="HubbleGalleryFSharp.MainPage" Title="Hubble">
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:HubbleGalleryFSharp"
+             x:Class="HubbleGalleryFSharp.MainPage"
+             Title="Hubble"
+             BackgroundColor="#182D40">
     <StackLayout>
-        <Picker x:Name="FeedPicker"></Picker>
-        <ListView x:Name="PicturesListView" RowHeight="120" VerticalOptions="FillAndExpand">
+        <ListView x:Name="PicturesListView" RowHeight="183" SeparatorVisibility="None" VerticalOptions="FillAndExpand" BackgroundColor="Transparent">
+            <ListView.Header>
+                <BoxView>
+                    <BoxView.HeightRequest>
+                        <OnPlatform x:TypeArguments="x:Double" iOS="80" Android="0" />
+                    </BoxView.HeightRequest>
+                </BoxView>
+            </ListView.Header>
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
-                        <StackLayout Orientation="Horizontal">
-                            <Image Source="{Binding ImageLink}" HeightRequest="120" WidthRequest="120" Aspect="AspectFill" />
-                            <Label Text="{Binding Title}" VerticalOptions="CenterAndExpand" LineBreakMode="TailTruncation" />
-                        </StackLayout>
+                        <Grid Margin="10,0,10,8">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*" />
+                                <RowDefinition Height="40" />
+                            </Grid.RowDefinitions>
+                            
+                            <Image Grid.RowSpan="2" Source="{Binding ImageLink}" Aspect="AspectFill" />
+                            <BoxView Grid.Row="1" BackgroundColor="Black" Opacity="0.75" />
+                            <Label Grid.Row="1" Text="{Binding Title}" LineBreakMode="TailTruncation" TextColor="White" Margin="15,5,15,5" VerticalOptions="Center" FontSize="16" />
+                        </Grid>
                     </ViewCell>
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
+<!--        <Picker x:Name="FeedPicker" Margin="10,0,10,0" BackgroundColor="Transparent" TextColor="White"></Picker>-->
     </StackLayout>
 </ContentPage>

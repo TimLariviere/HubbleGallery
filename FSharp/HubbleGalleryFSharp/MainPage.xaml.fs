@@ -14,7 +14,7 @@ type MainPage() as this =
     let mutable isInitialized = false
 
     // Controls
-    let _feedPicker = this.FindByName "FeedPicker" :> Picker
+    //let _feedPicker = this.FindByName "FeedPicker" :> Picker
     let _picturesListView = this.FindByName "PicturesListView" :> ListView
 
     // Methods
@@ -24,14 +24,14 @@ type MainPage() as this =
             _picturesListView.ItemsSource <- pictures
             this.IsBusy <- false
         )
-    } 
+    }
 
     // Event handlers
-    let onFeedSelected = EventHandler(fun _ args ->
-        let feed = _feedPicker.SelectedItem :?> string |> getFeedFromName
-        this.IsBusy <- true
-        loadAsync feed |> Async.Start
-    )
+    //let onFeedSelected = EventHandler(fun _ args ->
+    //    let feed = _feedPicker.SelectedItem :?> string |> getFeedFromName
+    //    this.IsBusy <- true
+    //    loadAsync feed |> Async.Start
+    //)
 
     let onItemSelected = EventHandler<ItemTappedEventArgs>(fun _ args ->
         let item = args.Item :?> HubblePicture
@@ -41,12 +41,12 @@ type MainPage() as this =
     // Lifecycle
     override this.OnAppearing() =
         // Load feed picker
-        _feedPicker.Items.Clear()
-        feeds |> Map.iter (fun k v -> _feedPicker.Items.Add v.Name)
-        _feedPicker.SelectedIndex <- 0
+        //_feedPicker.Items.Clear()
+        //feeds |> Map.iter (fun k v -> _feedPicker.Items.Add v.Name)
+        //_feedPicker.SelectedIndex <- 0
 
         // Events
-        _feedPicker.SelectedIndexChanged.AddHandler onFeedSelected
+        //_feedPicker.SelectedIndexChanged.AddHandler onFeedSelected
         _picturesListView.ItemTapped.AddHandler onItemSelected
 
         if isInitialized = false then
@@ -57,5 +57,5 @@ type MainPage() as this =
             ()
 
     override this.OnDisappearing() =
-        _feedPicker.SelectedIndexChanged.RemoveHandler onFeedSelected
+        //_feedPicker.SelectedIndexChanged.RemoveHandler onFeedSelected
         _picturesListView.ItemTapped.RemoveHandler onItemSelected

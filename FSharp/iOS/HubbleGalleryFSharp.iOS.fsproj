@@ -106,12 +106,14 @@
     <None Include="Info.plist" />
     <None Include="Entitlements.plist" />
     <Compile Include="HackedPageRenderer.fs" />
+    <Compile Include="ExtendedViewCellRenderer.fs" />
+    <Compile Include="BlurredNavigationRenderer.fs" />
     <Compile Include="AppDelegate.fs" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\HubbleGalleryFSharp\HubbleGalleryFSharp.fsproj">
-      <Project>{5E15C864-E997-4E8A-BE98-D27F56C64EFE}</Project>
+      <Project>{E2E7B7BB-8A7F-46B5-ABFB-B51BB40CB0AB}</Project>
       <Name>HubbleGalleryFSharp</Name>
     </ProjectReference>
   </ItemGroup>

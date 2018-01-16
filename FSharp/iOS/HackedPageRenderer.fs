@@ -24,7 +24,7 @@ type HackedPageRenderer() =
         else
             ()
 
-module Dummy =
+module Dummy_HackedPageRenderer =
     [<assembly: Xamarin.Forms.ExportRenderer(typeof<Xamarin.Forms.Page>, typeof<HackedPageRenderer>)>]
     do ()
 

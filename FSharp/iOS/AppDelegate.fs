@@ -11,6 +11,7 @@ type AppDelegate () =
     inherit FormsApplicationDelegate ()
 
     override this.FinishedLaunching (app, options) =
+        app.StatusBarStyle <- UIStatusBarStyle.LightContent
         Forms.Init()
         this.LoadApplication (new HubbleGalleryFSharp.App())
         base.FinishedLaunching(app, options)

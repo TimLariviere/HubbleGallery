@@ -70,7 +70,7 @@ module HubbleDataSource =
         {
             Title = item.Title.Trim()
             Link = item.Link |> Uri
-            Description = Html item.Description
+            Description = Html (item.Description.Trim())
             ThumbnailLink = item.Enclosure.Url |> Uri
             ImageLink = item.Enclosure.Url |> Uri
             Date = item.PubDate
